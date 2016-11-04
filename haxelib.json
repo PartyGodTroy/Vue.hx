@@ -1,0 +1,12 @@
+{
+  "name": "Vue",
+  "url" : "https://github.com/kidveno/Vue",
+  "license": "MIT",
+  "tags": ["js", "mvw","mvvm"],
+  "description": "Vue 2.0 externs",
+  "version": "0.1.0",
+  "classPath": "src/",
+  "releasenote": "Initial release, everything is working correctly.",
+  "contributors": ["Ventroy"],
+  "dependencies": {}
+}
