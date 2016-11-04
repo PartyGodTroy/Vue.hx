@@ -17,7 +17,6 @@ extern class Vue implements Dynamic
     @:native("$isServer") public var isServer:Bool;
     @:native("$mount")public function mount(el:String):Vue;
     @:native("$watch")public function watch(item:String, cb:Dynamic->Dynamic->Void):Vue;
-    public static var http:Dynamic;//Move to VueResource
 
     public static function component(tag:String, ?componentOptions:Dynamic):Dynamic;
     public static function use(extension:Dynamic):Void;

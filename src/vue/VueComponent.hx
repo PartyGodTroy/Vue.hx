@@ -12,7 +12,6 @@ class VueComponent
     {
         if(options.template == null || options.template == ""){
             options.template = Meta.getType(Type.getClass(this)).template[0];
-            
         }
         options.data = data;
         Vue.component(tag,options);

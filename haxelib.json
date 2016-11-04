@@ -1,6 +1,6 @@
 {
   "name": "Vue",
-  "url" : "https://github.com/kidveno/Vue",
+  "url" : "https://github.com/kidveno/Vue.hx",
   "license": "MIT",
   "tags": ["js", "mvw","mvvm"],
   "description": "Vue 2.0 externs",
