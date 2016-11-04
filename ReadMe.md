@@ -6,7 +6,7 @@ Haxe externs for [Vue.JS](https://vuejs.org/ "Vue.js Homepage") 2.0. intended to
 
 ## Installation
 ```cmd
-C:\> haxelib install vue.hx
+C:\> haxelib install vue
 ```
 
 ## Features
