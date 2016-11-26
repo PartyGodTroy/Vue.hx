@@ -47,6 +47,7 @@ typedef VueComponentOptions = {
 }
 typedef VueOptions ={
     @:optional var watch:Dynamic;
+    @:optional var router:VueRouter;
     @:optional var props:Array<String>;
     @:optional var methods:Dynamic;
     @:optional var computed:Dynamic;
