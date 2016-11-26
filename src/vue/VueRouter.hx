@@ -1,6 +1,6 @@
 package vue;
 
-@native("VueRouter")
+@:native("VueRouter")
 extern class VueRouter {
   public function new (routeOptions:Dynamic);
 }
