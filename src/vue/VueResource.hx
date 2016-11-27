@@ -21,8 +21,8 @@ typedef RequestOptions =
 	var params:Dynamic;
 	var method:String;
 	var timeout:Int;
-	var before:Request->Void;
-	var progress:Request->Void;
+	var before:RequestOptions->Void;
+	var progress:js.html.Event->Void;
 	var credentials:Bool;
 	var emulateHTTP:Bool;
 	var emulateJSON:Bool;
