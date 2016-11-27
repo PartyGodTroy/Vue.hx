@@ -31,7 +31,7 @@ typedef Response =
 {
 	var url:String;
 	var body:Dynamic;
-	var headers:Header;
+	var headers:Dynamic;
 	var ok:Bool;
 	var status:Int;
 	var statusText:String;
