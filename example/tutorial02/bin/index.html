@@ -1,0 +1,36 @@
+<html>
+<head><title>Haxe / Vue.js - example</title></head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+
+<div id="app-3">
+  <p v-if="seen">Now you see me</p>
+</div>
+
+<p>
+enter in console:<br>
+<code>Main.app3.seen = false</code>
+</p>
+
+
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+
+
+<p>
+enter in console:<br>
+<code>Main.app4.todos.push({ text: 'New item' })</code>
+</p>
+
+
+
+
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>

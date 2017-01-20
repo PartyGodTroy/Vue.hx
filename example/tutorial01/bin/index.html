@@ -1,0 +1,26 @@
+<html>
+<head><title>Haxe / Vue.js - example</title></head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+
+
+<div id="app">
+	<p>{{ message }}</p>
+</div>
+
+
+<div id="app-2">
+	<span v-bind:title="message">
+		Hover your mouse over me for a few seconds to see my dynamically bound title!
+	</span>
+</div>
+
+<p>
+enter in console:<br>
+<code>Main.app2.message = 'some new message'</code>
+</p>
+
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
