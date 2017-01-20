@@ -1,16 +1,65 @@
-# These examples follow
+# Tutorials
 
-<https://vuejs.org/v2/guide/>
+Follow these instructions <https://vuejs.org/v2/guide/>
 
 
-Use `@:expose` to make sure you can use the console instructions
-And `public static var` to make sure you have access.
+- tutorial01 <https://vuejs.org/v2/guide/#Declarative-Rendering> *
+- tutorial02 <https://vuejs.org/v2/guide/#Conditionals-and-Loops> *
+- tutorial03 <https://vuejs.org/v2/guide/#Handling-User-Input>
 
-The only difference is you start console command with `Main`.
 
-- tutorial01 <https://vuejs.org/v2/guide/#Declarative-Rendering>
-- tutorial02 <https://vuejs.org/v2/guide/#Conditionals-and-Loops>
+*
+> Use `@:expose` to make sure you can use the console instructions
+> And `public static var` to make sure you have access.
+>
+> The only difference is you start console command with `Main`.
 
+# Difference
+
+
+# Context / namespace
+In Vue.js, the `this` keyword has a different context and properties in callbacks like `methods`
+
+```js
+	var app5 = new Vue({
+		el: '#app-5',
+		data: {
+			message: 'Hello Vue.js!'
+		},
+		methods: {
+			reverseMessage: function () {
+				// this.message
+				console.log(this.message);
+			}
+		}
+	});
+```
+
+That will not work in Haxe, because it has a different context.
+We need to have `this.xxx`, and we use a little hack: `This.xxx`.
+There are currently 3 ways to do this:
+
+- `trace(untyped This.message);`
+- `trace(Reflect.field(This, 'message'));`
+- `trace(untyped __js__('this.message'));`
+
+```haxe
+		var app5 = new Vue({
+			el: '#app-5',
+			data: {
+				message: 'Hello Vue.js!'
+			},
+			methods: {
+				reverseMessage: function ()
+					// this.message
+					trace(untyped This.message);
+					trace(Reflect.field(This, 'message'));
+					trace(untyped __js__('this.message'));
+				}
+			}
+		});
+
+```
 
 
 # CheatSheet / copy_paste

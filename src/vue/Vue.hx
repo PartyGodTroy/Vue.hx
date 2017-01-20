@@ -5,6 +5,14 @@ import haxe.extern.EitherType;
 import haxe.extern.Rest;
 import js.html.HtmlElement;
 
+/**
+ * Vuejs externs
+ *
+ * @author Ventroy Rolle (https://github.com/kidveno)
+ * @author TiagoLr (https://github.com/tiagolr)
+ * @author Matthijs Kamstra (https://github.com/MatthijsKamstra)
+ */
+
 @:native("Vue")
 extern class Vue implements Dynamic
 {
@@ -31,6 +39,21 @@ extern class Vue implements Dynamic
     public static function compile(val:String):RenderFunction;
     // Finish adding instance methods/data downward
 }
+
+@:native('this')
+extern class Context {
+    @:selfCall public function Context():Dynamic;
+}
+@:native('this')
+extern class MethodsCtx {
+    @:selfCall public function MethodsCtx():Dynamic;
+}
+@:native('this')
+extern class This
+{
+    @:selfCall public function This():Dynamic;
+}
+
 typedef VueConfig = {
     @:optional var silent:Bool;
     @:optional var optionsMergeStrategies:Dynamic;
