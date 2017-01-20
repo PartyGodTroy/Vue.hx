@@ -1,5 +1,8 @@
 package vue;
 
+import haxe.io.Path;
+import haxe.extern.EitherType;
+import haxe.extern.Rest;
 import js.html.HtmlElement;
 
 @:native("Vue")
@@ -46,6 +49,12 @@ typedef VueComponentOptions = {
     @:optional var data:Void->Dynamic;
 }
 typedef VueOptions ={
+
+    // DOM
+    @:optional var el:EitherType<String, EitherType<HtmlElement, Void->Dynamic>>;
+    @:optional var replace:Bool; // only respected if the template option is also present.
+
+
     @:optional var watch:Dynamic;
     @:optional var router:VueRouter;
     @:optional var props:Array<String>;
