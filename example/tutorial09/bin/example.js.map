@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"example.js",
+"sourceRoot":"file:///",
+"sources":["/Users/matthijs/Documents/GIT/Vue.hx/example/tutorial09/src/Main.hx"],
+"names":[],
+"mappings":";;WAOC,WACA;AAAA,CACC,YAAM;CAEK,QAAQ,OACb,gBACC,WAEI,mBAEO,CAAC,YACE,qDACF,wFACE,YACI,sFACA,qFAGjB,YACa,mDACF,qFACE,YACI,qGACA,oGAGjB,YACa,yEACF,4GACE,YACI,uGACA,sGAGjB,YACa,iEACF,+FACE,YACI,qGACA,oGAGjB,YACa,mCACF,sEACE,YACI,6FACA,4FAGjB,YACa,sEACF,wGACE,YACI,sHACA;;YAUZ,WACF;AAAA;;;;;"
+}

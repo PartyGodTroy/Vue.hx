@@ -6,7 +6,27 @@ Follow these instructions <https://vuejs.org/v2/guide/>
 - tutorial01 <https://vuejs.org/v2/guide/#Declarative-Rendering> *
 - tutorial02 <https://vuejs.org/v2/guide/#Conditionals-and-Loops> *
 - tutorial03 <https://vuejs.org/v2/guide/#Handling-User-Input>
+- tutorial04 <https://vuejs.org/v2/guide/#Composing-with-Components>
 
+<http://tutorialzine.com/2016/03/5-practical-examples-for-learning-vue-js/>
+
+- tutorial05 (NavigationBar)
+- tutorial06 (Inline Editor)
+- tutorial07 (Order Form)
+- tutorial08 (Instant Search) // not working ....
+- tutorial09 (Switchable Grid)
+
+
+<https://router.vuejs.org/en/essentials/getting-started.html>
+
+- tutorial_router01
+- tutorial_router02 <https://github.com/vuejs/vue-router/blob/dev/examples/named-routes/app.js>
+
+
+
+<https://mattstauffer.co/blog/getting-started-using-vues-vue-router-for-single-page-apps>
+
+- tutorial_router
 
 *
 > Use `@:expose` to make sure you can use the console instructions
@@ -87,6 +107,120 @@ So use this in Haxe
 Date.now();
 ```
 
+## Shorthand
+
+the short-hand van Vue doesn't work...
+like
+
+```js
+	var router = new VueRouter({
+		routes // short for routes: routes
+	});
+```
+
+```haxe
+	var router = new VueRouter({
+		routes:routes
+	});
+```
+
+```
+const router = new VueRouter({
+  routes: [
+    // dynamic segments start with a colon
+    { path: '/user/:id', component: User }
+  ]
+})
+
+
+
+
+
+## const
+
+> Constants are block-scoped, much like variables defined using the `let` statement. The value of a constant cannot change through re-assignment, and it can't be redeclared.
+
+Just changed to `var` because Haxe is a strictly typed language we don't have that problem.
+
+Which brings us to the variable name with all caps or starting with a Capital letter... not necessary but it wil work.
+
+```js
+const User = {
+  template: '<div>User</div>'
+}
+```
+
+```haxe
+var user = {
+  template: '<div>User</div>'
+}
+```
+
+## single quotes vs double quotes and `$`
+
+Haxe lets you have variables in string with `$`, but only with single quotes!
+
+
+```haxe
+var temp = 3;
+trace('$temp'); // 3
+trace("$temp"); // $temp
+```
+
+Vue uses it for a different reason.
+
+```js
+const Bar = { template: '<div>This is Bar {{ $route.params.id }}</div>' }
+```
+
+But because its done in a single qoute string Haxe will expect a variable name `route`.
+To fix this one just use double quotes
+
+
+```js
+var bar = { template: "<div>This is Bar {{ $route.params.id }}</div>" };
+```
+
+This problem is more visible in the `router` with the use of templates
+
+```js
+	new Vue({
+		router,
+		template: '
+			<div id="app">
+			<h1>Named Routes</h1>
+			<p>Current route name: {{ $route.name }}</p>
+			<ul>
+				<li><router-link :to="{ name: \'home\' }">home</router-link></li>
+				<li><router-link :to="{ name: \'foo\' }">foo</router-link></li>
+				<li><router-link :to="{ name: \'bar\', params: { id: 123 }}">bar</router-link></li>
+			</ul>
+			<router-view class="view"></router-view>
+			</div>'
+	}).$mount('#app')
+```
+
+would become in Haxe
+
+- change template to double quotes: " .... "
+- escape double qoutes `\"`
+
+```haxe
+	new Vue({
+		router:router,
+		template: "
+			<div id=\"app\">
+			<h1>Named Routes</h1>
+			<p>Current route name: {{ $route.name }}</p>
+			<ul>
+				<li><router-link :to=\"{ name: 'home' }\">home</router-link></li>
+				<li><router-link :to=\"{ name: 'foo' }\">foo</router-link></li>
+				<li><router-link :to=\"{ name: 'bar', params: { id: 123 }}\">bar</router-link></li>
+			</ul>
+			<router-view class=\"view\"></router-view>
+			</div>"
+	}).$mount('#app');
+```
 
 
 ## ;
