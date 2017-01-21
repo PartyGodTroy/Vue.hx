@@ -14,6 +14,7 @@ class Main
 		var Home = { template: '<div>This is Home</div>' }
 		var Foo = { template: '<div>This is Foo</div>' }
 		var Bar = { template: "<div>This is Bar {{ $route.params.id }}</div>" }
+		var Bar2 = { template: '<div>This is Bar {{ $$route.params.id }}</div>' }
 
 		var router = new VueRouter({
 			// mode: 'history',

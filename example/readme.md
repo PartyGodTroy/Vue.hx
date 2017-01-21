@@ -41,18 +41,18 @@ Follow these instructions <https://vuejs.org/v2/guide/>
 In Vue.js, the `this` keyword has a different context and properties in callbacks like `methods`
 
 ```js
-	var app5 = new Vue({
-		el: '#app-5',
-		data: {
-			message: 'Hello Vue.js!'
-		},
-		methods: {
-			reverseMessage: function () {
-				// this.message
-				console.log(this.message);
-			}
+var app5 = new Vue({
+	el: '#app-5',
+	data: {
+		message: 'Hello Vue.js!'
+	},
+	methods: {
+		reverseMessage: function () {
+			// this.message
+			console.log(this.message);
 		}
-	});
+	}
+});
 ```
 
 That will not work in Haxe, because it has a different context.
@@ -64,20 +64,20 @@ There are currently 3 ways to do this:
 - `trace(untyped __js__('this.message'));`
 
 ```haxe
-		var app5 = new Vue({
-			el: '#app-5',
-			data: {
-				message: 'Hello Vue.js!'
-			},
-			methods: {
-				reverseMessage: function ()
-					// this.message
-					trace(untyped This.message);
-					trace(Reflect.field(This, 'message'));
-					trace(untyped __js__('this.message'));
-				}
-			}
-		});
+var app5 = new Vue({
+	el: '#app-5',
+	data: {
+		message: 'Hello Vue.js!'
+	},
+	methods: {
+		reverseMessage: function ()
+			// this.message
+			trace(untyped This.message);
+			trace(Reflect.field(This, 'message'));
+			trace(untyped __js__('this.message'));
+		}
+	}
+});
 
 ```
 
@@ -91,7 +91,7 @@ But here are the once I ran into this project
 
 ## Date
 
-most copy paste stuff is easy fixed, so it this one.
+Most copy&paste stuff is easy fixed, so it this one.
 But this is a different language decision
 
 In Haxe you will create a [date](http://api.haxe.org/Date.html) with `new Date(year, month, day, hour, min, sec)`
@@ -109,31 +109,22 @@ Date.now();
 
 ## Shorthand
 
-the short-hand van Vue doesn't work...
-like
+The short-hand van Vue doesn't work...
+Something like this is possible in Vue, but not in Haxe
 
 ```js
-	var router = new VueRouter({
-		routes // short for routes: routes
-	});
+var router = new VueRouter({
+	routes // short for routes: routes
+});
 ```
+
+To fix this just don't use the shorthand
 
 ```haxe
-	var router = new VueRouter({
-		routes:routes
-	});
+var router = new VueRouter({
+	routes:routes
+});
 ```
-
-```
-const router = new VueRouter({
-  routes: [
-    // dynamic segments start with a colon
-    { path: '/user/:id', component: User }
-  ]
-})
-
-
-
 
 
 ## const
@@ -142,7 +133,7 @@ const router = new VueRouter({
 
 Just changed to `var` because Haxe is a strictly typed language we don't have that problem.
 
-Which brings us to the variable name with all caps or starting with a Capital letter... not necessary but it wil work.
+Which brings us to the variable name with all caps or starting with a Capital letter... not necessary but it will work.
 
 ```js
 const User = {
@@ -150,13 +141,15 @@ const User = {
 }
 ```
 
+Remember the var name can also be `User` in this case but nicer would be `user`
+
 ```haxe
 var user = {
   template: '<div>User</div>'
 }
 ```
 
-## single quotes vs double quotes and `$`
+## `'` vs `"` and `$`
 
 Haxe lets you have variables in string with `$`, but only with single quotes!
 
@@ -170,56 +163,69 @@ trace("$temp"); // $temp
 Vue uses it for a different reason.
 
 ```js
-const Bar = { template: '<div>This is Bar {{ $route.params.id }}</div>' }
+const Bar = {
+	template: '<div>This is Bar {{ $route.params.id }}</div>'
+}
 ```
 
-But because its done in a single qoute string Haxe will expect a variable name `route`.
+But because its done in a single quote string Haxe will expect a variable name `route`.
 To fix this one just use double quotes
 
+```haxe
+var bar = {
+	template: "<div>This is Bar {{ $route.params.id }}</div>"
+};
+```
+
+Or change `$` into `$$` (which escapes it)
 
 ```js
-var bar = { template: "<div>This is Bar {{ $route.params.id }}</div>" };
+var bar = {
+	template: '<div>This is Bar {{ $$route.params.id }}</div>'
+}
 ```
+
+
 
 This problem is more visible in the `router` with the use of templates
 
 ```js
-	new Vue({
-		router,
-		template: '
-			<div id="app">
-			<h1>Named Routes</h1>
-			<p>Current route name: {{ $route.name }}</p>
-			<ul>
-				<li><router-link :to="{ name: \'home\' }">home</router-link></li>
-				<li><router-link :to="{ name: \'foo\' }">foo</router-link></li>
-				<li><router-link :to="{ name: \'bar\', params: { id: 123 }}">bar</router-link></li>
-			</ul>
-			<router-view class="view"></router-view>
-			</div>'
-	}).$mount('#app')
+new Vue({
+	router,
+	template: '
+		<div id="app">
+		<h1>Named Routes</h1>
+		<p>Current route name: {{ $route.name }}</p>
+		<ul>
+			<li><router-link :to="{ name: \'home\' }">home</router-link></li>
+			<li><router-link :to="{ name: \'foo\' }">foo</router-link></li>
+			<li><router-link :to="{ name: \'bar\', params: { id: 123 }}">bar</router-link></li>
+		</ul>
+		<router-view class="view"></router-view>
+		</div>'
+}).$mount('#app')
 ```
 
 would become in Haxe
 
 - change template to double quotes: " .... "
-- escape double qoutes `\"`
+- escape double quotes `"`
 
 ```haxe
-	new Vue({
-		router:router,
-		template: "
-			<div id=\"app\">
-			<h1>Named Routes</h1>
-			<p>Current route name: {{ $route.name }}</p>
-			<ul>
-				<li><router-link :to=\"{ name: 'home' }\">home</router-link></li>
-				<li><router-link :to=\"{ name: 'foo' }\">foo</router-link></li>
-				<li><router-link :to=\"{ name: 'bar', params: { id: 123 }}\">bar</router-link></li>
-			</ul>
-			<router-view class=\"view\"></router-view>
-			</div>"
-	}).$mount('#app');
+new Vue({
+	router:router,
+	template: "
+		<div id=\"app\">
+		<h1>Named Routes</h1>
+		<p>Current route name: {{ $route.name }}</p>
+		<ul>
+			<li><router-link :to=\"{ name: 'home' }\">home</router-link></li>
+			<li><router-link :to=\"{ name: 'foo' }\">foo</router-link></li>
+			<li><router-link :to=\"{ name: 'bar', params: { id: 123 }}\">bar</router-link></li>
+		</ul>
+		<router-view class=\"view\"></router-view>
+		</div>"
+}).$mount('#app');
 ```
 
 
