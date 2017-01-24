@@ -1,20 +1,21 @@
 # Tutorials
 
-Follow these instructions <https://vuejs.org/v2/guide/>
+Follow these instructions from the original Vue.js website: <https://vuejs.org/v2/guide/>
 
 
 - [tutorial01](tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> *
-- tutorial02 <https://vuejs.org/v2/guide/#Conditionals-and-Loops> *
-- tutorial03 <https://vuejs.org/v2/guide/#Handling-User-Input>
-- tutorial04 <https://vuejs.org/v2/guide/#Composing-with-Components>
+- [tutorial02](tutorial02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial02/bin/index.html) <https://vuejs.org/v2/guide/#Conditionals-and-Loops> *
+- [tutorial03](tutorial03) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial03/bin/index.html) <https://vuejs.org/v2/guide/#Handling-User-Input>
+- [tutorial04](tutorial04) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial04/bin/index.html) <https://vuejs.org/v2/guide/#Composing-with-Components>
 
-<http://tutorialzine.com/2016/03/5-practical-examples-for-learning-vue-js/>
 
-- tutorial05 (NavigationBar)
-- tutorial06 (Inline Editor)
-- tutorial07 (Order Form)
-- tutorial08 (Instant Search) // not working ....
-- tutorial09 (Switchable Grid)
+Then some tutorials from: <http://tutorialzine.com/2016/03/5-practical-examples-for-learning-vue-js/>
+
+- [tutorial05](tutorial05) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial05/bin/index.html) (NavigationBar)
+- [tutorial06](tutorial06) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial06/bin/index.html) (Inline Editor)
+- [tutorial07](tutorial07) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial07/bin/index.html) (Order Form)
+- [tutorial08](tutorial08) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial08/bin/index.html) (Instant Search) // not working ....
+- [tutorial09](tutorial09) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial09/bin/index.html) (Switchable Grid)
 
 
 <https://router.vuejs.org/en/essentials/getting-started.html>
