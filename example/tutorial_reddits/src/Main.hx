@@ -45,19 +45,15 @@ class Main
 						return 'background-image: url(' + img + ')';
 					}
 					else {
-						return 'background-image: url(assets/img/placeholder.png)';
+						return 'background-image: url(placeholder.png)';
 					}
 				}
 			}
 		});
 
-
-
-
 		/*-----------------
 		   Custom filters
 		-----------------*/
-
 
 		// Filter that transform text to uppercase.
 		Vue.filter('uppercase', function(value) {
@@ -76,7 +72,6 @@ class Main
 				return value.substring(0, length) + '...';
 			}
 		});
-
 
 		/*-----------------
 		   Initialize app

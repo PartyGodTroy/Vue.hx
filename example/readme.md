@@ -3,7 +3,7 @@
 Follow these instructions <https://vuejs.org/v2/guide/>
 
 
-- tutorial01 <https://vuejs.org/v2/guide/#Declarative-Rendering> *
+- [tutorial01](https://github.com/MatthijsKamstra/Vue.hx/tree/master/example/tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> *
 - tutorial02 <https://vuejs.org/v2/guide/#Conditionals-and-Loops> *
 - tutorial03 <https://vuejs.org/v2/guide/#Handling-User-Input>
 - tutorial04 <https://vuejs.org/v2/guide/#Composing-with-Components>
@@ -28,6 +28,8 @@ Follow these instructions <https://vuejs.org/v2/guide/>
 
 - tutorial_router
 
+
+
 *
 > Use `@:expose` to make sure you can use the console instructions
 > And `public static var` to make sure you have access.
@@ -39,6 +41,8 @@ Follow these instructions <https://vuejs.org/v2/guide/>
 
 # Context / namespace
 In Vue.js, the `this` keyword has a different context and properties in callbacks like `methods`
+
+// `this` points to the vm instance
 
 ```js
 var app5 = new Vue({
