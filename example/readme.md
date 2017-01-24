@@ -2,6 +2,7 @@
 
 Follow these instructions from the original Vue.js website: <https://vuejs.org/v2/guide/>
 
+The walk you through the basics from Vue.js, that why there is no styling (focus on the code!).. :D
 
 - [tutorial01](tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> *
 - [tutorial02](tutorial02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial02/bin/index.html) <https://vuejs.org/v2/guide/#Conditionals-and-Loops> *
@@ -11,17 +12,18 @@ Follow these instructions from the original Vue.js website: <https://vuejs.org/v
 
 Then some tutorials from: <http://tutorialzine.com/2016/03/5-practical-examples-for-learning-vue-js/>
 
+More complex example showing the power of Vue.js, and doing that with style :P
+
 - [tutorial05](tutorial05) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial05/bin/index.html) (NavigationBar)
 - [tutorial06](tutorial06) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial06/bin/index.html) (Inline Editor)
 - [tutorial07](tutorial07) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial07/bin/index.html) (Order Form)
-- [tutorial08](tutorial08) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial08/bin/index.html) (Instant Search) // not working ....
+- [tutorial08](tutorial08) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial08/bin/index.html) (Instant Search)
 - [tutorial09](tutorial09) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial09/bin/index.html) (Switchable Grid)
 
 
-<https://router.vuejs.org/en/essentials/getting-started.html>
 
-- tutorial_router01
-- tutorial_router02 <https://github.com/vuejs/vue-router/blob/dev/examples/named-routes/app.js>
+- [tutorial_router01](tutorial_router01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_router01/bin/index.html) <https://router.vuejs.org/en/essentials/getting-started.html>
+- [tutorial_router02](tutorial_router02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_router02/bin/index.html) <https://github.com/vuejs/vue-router/blob/dev/examples/named-routes/app.js>
 
 
 
