@@ -3,7 +3,7 @@
 Follow these instructions <https://vuejs.org/v2/guide/>
 
 
-- [tutorial01](/tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> *
+- [tutorial01](tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> *
 - tutorial02 <https://vuejs.org/v2/guide/#Conditionals-and-Loops> *
 - tutorial03 <https://vuejs.org/v2/guide/#Handling-User-Input>
 - tutorial04 <https://vuejs.org/v2/guide/#Composing-with-Components>
