@@ -31,11 +31,16 @@ var Main = function() {
 		}
 		searchString = StringTools.trim(searchString == null ? "null" : "" + searchString).toLowerCase();
 		var item = articles_array[0];
-		console.log("> " + item.title.toLowerCase().indexOf(searchString));
-		articles_array = articles_array.filter(function(item1) {
-			return item1;
+		var filteredArray = [];
+		articles_array.filter(function(item1) {
+			if(item1.title.toLowerCase().indexOf(searchString) != -1) {
+				filteredArray.push(item1);
+				return true;
+			} else {
+				return false;
+			}
 		});
-		return articles_array;
+		return filteredArray;
 	}}});
 };
 Main.main = function() {

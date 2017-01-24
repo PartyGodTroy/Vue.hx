@@ -69,22 +69,21 @@ class Main
 					searchString = Std.string(searchString).trim().toLowerCase();
 
 					var item = articles_array[0];
-					trace('> '+item.title.toLowerCase().indexOf(searchString));
 
+					var filteredArray =  [];
 
-					articles_array = articles_array.filter(function(item){
-
-						// trace(item.title);
+					articles_array.filter(function(item){
 
 						if(item.title.toLowerCase().indexOf(searchString) != -1){
-							return item;
+							filteredArray.push(item);
+							return true;
 						}else{
 							return false;
 						}
 					});
 
 					// Return an array with the filtered data.
-					return articles_array;
+					return filteredArray;
 				}
 			}
 		});
