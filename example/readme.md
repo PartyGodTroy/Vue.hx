@@ -4,8 +4,8 @@ Follow these instructions from the original Vue.js website: <https://vuejs.org/v
 
 The walk you through the basics from Vue.js, that why there is no styling (focus on the code!).. :D
 
-- [tutorial01](tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> *
-- [tutorial02](tutorial02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial02/bin/index.html) <https://vuejs.org/v2/guide/#Conditionals-and-Loops> *
+- [tutorial01](tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> **\***
+- [tutorial02](tutorial02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial02/bin/index.html) <https://vuejs.org/v2/guide/#Conditionals-and-Loops> **\***
 - [tutorial03](tutorial03) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial03/bin/index.html) <https://vuejs.org/v2/guide/#Handling-User-Input>
 - [tutorial04](tutorial04) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial04/bin/index.html) <https://vuejs.org/v2/guide/#Composing-with-Components>
 
@@ -21,19 +21,29 @@ More complex example showing the power of Vue.js, and doing that with style :P
 - [tutorial09](tutorial09) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial09/bin/index.html) (Switchable Grid)
 
 
+The next examples show the vue-router:
+
 
 - [tutorial_router01](tutorial_router01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_router01/bin/index.html) <https://router.vuejs.org/en/essentials/getting-started.html>
-- [tutorial_router02](tutorial_router02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_router02/bin/index.html) <https://github.com/vuejs/vue-router/blob/dev/examples/named-routes/app.js>
+- [tutorial_router02](tutorial_router02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_router01/bin/index.html) <https://github.com/vuejs/vue-router/blob/dev/examples/named-routes/app.js>
 
+More complex templating with vue-resource assets loader:
 
+- [tutorial_reddits](tutorial_reddits) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_reddits/bin/index.html) <http://tutorialzine.com/2016/08/building-your-first-app-with-vue-js/>
 
+<!--
+
+Another router example:
+
+Keep in mind that the tutorial is written in an older version of vue-router so it's a little rewritten (<https://vuejs.org/v2/guide/migration-vue-router.html>)
+
+- [tutorial_router03](tutorial_router03) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_router03/bin/index.html)
 <https://mattstauffer.co/blog/getting-started-using-vues-vue-router-for-single-page-apps>
 
-- tutorial_router
+-->
 
 
-
-*
+(**\***)
 > Use `@:expose` to make sure you can use the console instructions
 > And `public static var` to make sure you have access.
 >
