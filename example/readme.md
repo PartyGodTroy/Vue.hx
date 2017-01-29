@@ -102,9 +102,9 @@ var app5 = new Vue({
 
 # CheatSheet / copy_paste
 
-This document helps je: [copy&paste](https://github.com/MatthijsKamstra/haxejs/blob/master/haxejs/copy_paste.md)
+Most of the time you can just copy paste JS into Haxe documents... And sometimes you need to make a little adjustmen. Check out this document: [copy&paste](https://github.com/MatthijsKamstra/haxejs/blob/master/haxejs/copy_paste.md)
 
-But here are the once I ran into with these examples:
+But here are the stuff I ran into with these examples:
 
 ## Date
 
@@ -158,7 +158,7 @@ const User = {
 }
 ```
 
-Remember the var name can also be `User` in this case but nicer would be `user`
+You can use the var name `User` with a cap, but in this case but nicer would be `user`
 
 ```haxe
 var user = {
