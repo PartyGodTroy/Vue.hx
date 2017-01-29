@@ -2,7 +2,7 @@
   "name": "Vue",
   "url" : "https://github.com/kidveno/Vue.hx",
   "license": "MIT",
-  "tags": ["js", "mvw","mvvm"],
+  "tags": ["js", "mvw","mvvm", "frontend", "javascript", "reactive", "vue", "vue.js", "vuejs"],
   "description": "Vue 2.0 externs",
   "version": "0.1.0",
   "classPath": "src/",

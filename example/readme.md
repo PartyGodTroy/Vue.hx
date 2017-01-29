@@ -4,8 +4,8 @@ Follow these instructions from the original Vue.js website: <https://vuejs.org/v
 
 The walk you through the basics from Vue.js, that why there is no styling (focus on the code!).. :D
 
-- [tutorial01](tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> **\***
-- [tutorial02](tutorial02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial02/bin/index.html) <https://vuejs.org/v2/guide/#Conditionals-and-Loops> **\***
+- [tutorial01](tutorial01) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial01/bin/index.html) <https://vuejs.org/v2/guide/#Declarative-Rendering> **1**
+- [tutorial02](tutorial02) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial02/bin/index.html) <https://vuejs.org/v2/guide/#Conditionals-and-Loops> **1**
 - [tutorial03](tutorial03) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial03/bin/index.html) <https://vuejs.org/v2/guide/#Handling-User-Input>
 - [tutorial04](tutorial04) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial04/bin/index.html) <https://vuejs.org/v2/guide/#Composing-with-Components>
 
@@ -31,8 +31,6 @@ More complex templating with vue-resource assets loader:
 
 - [tutorial_reddits](tutorial_reddits) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_reddits/bin/index.html) <http://tutorialzine.com/2016/08/building-your-first-app-with-vue-js/>
 
-<!--
-
 Another router example:
 
 Keep in mind that the tutorial is written in an older version of vue-router so it's a little rewritten (<https://vuejs.org/v2/guide/migration-vue-router.html>)
@@ -40,22 +38,23 @@ Keep in mind that the tutorial is written in an older version of vue-router so i
 - [tutorial_router03](tutorial_router03) [show](http://htmlpreview.github.io/?https://github.com/MatthijsKamstra/Vue.hx/blob/master/example/tutorial_router03/bin/index.html)
 <https://mattstauffer.co/blog/getting-started-using-vues-vue-router-for-single-page-apps>
 
--->
 
-
-(**\***)
+(**1**)
 > Use `@:expose` to make sure you can use the console instructions
 > And `public static var` to make sure you have access.
 >
 > The only difference is you start console command with `Main`.
 
+
 # Difference
 
+We try to stay as close a possible to the original lib, but their are some differences I will explain here.
 
 # Context / namespace
+
 In Vue.js, the `this` keyword has a different context and properties in callbacks like `methods`
 
-// `this` points to the vm instance
+In vue `this` points to the vm instance
 
 ```js
 var app5 = new Vue({
@@ -73,12 +72,14 @@ var app5 = new Vue({
 ```
 
 That will not work in Haxe, because it has a different context.
-We need to have `this.xxx`, and we use a little hack: `This.xxx`.
+We need to have the code transpiled to `this.xxx`.
 There are currently 3 ways to do this:
 
 - `trace(untyped This.message);`
 - `trace(Reflect.field(This, 'message'));`
 - `trace(untyped __js__('this.message'));`
+
+(there is a extern class `This`)
 
 ```haxe
 var app5 = new Vue({
@@ -103,8 +104,7 @@ var app5 = new Vue({
 
 This document helps je: [copy&paste](https://github.com/MatthijsKamstra/haxejs/blob/master/haxejs/copy_paste.md)
 
-But here are the once I ran into this project
-
+But here are the once I ran into with these examples:
 
 ## Date
 
@@ -201,50 +201,6 @@ var bar = {
 	template: '<div>This is Bar {{ $$route.params.id }}</div>'
 }
 ```
-
-
-
-This problem is more visible in the `router` with the use of templates
-
-```js
-new Vue({
-	router,
-	template: '
-		<div id="app">
-		<h1>Named Routes</h1>
-		<p>Current route name: {{ $route.name }}</p>
-		<ul>
-			<li><router-link :to="{ name: \'home\' }">home</router-link></li>
-			<li><router-link :to="{ name: \'foo\' }">foo</router-link></li>
-			<li><router-link :to="{ name: \'bar\', params: { id: 123 }}">bar</router-link></li>
-		</ul>
-		<router-view class="view"></router-view>
-		</div>'
-}).$mount('#app')
-```
-
-would become in Haxe
-
-- change template to double quotes: " .... "
-- escape double quotes `"`
-
-```haxe
-new Vue({
-	router:router,
-	template: "
-		<div id=\"app\">
-		<h1>Named Routes</h1>
-		<p>Current route name: {{ $route.name }}</p>
-		<ul>
-			<li><router-link :to=\"{ name: 'home' }\">home</router-link></li>
-			<li><router-link :to=\"{ name: 'foo' }\">foo</router-link></li>
-			<li><router-link :to=\"{ name: 'bar', params: { id: 123 }}\">bar</router-link></li>
-		</ul>
-		<router-view class=\"view\"></router-view>
-		</div>"
-}).$mount('#app');
-```
-
 
 ## ;
 

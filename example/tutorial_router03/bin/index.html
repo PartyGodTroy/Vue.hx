@@ -6,9 +6,10 @@
 <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 
 <div id="app">
-	<a v-link="{ path: '/' }"><h1>Our company</h1></a>
+	<router-link to="/"><h1>Our company</h1></router-link>
 	<ul class="navigation">
-		<li><a v-link="{ path: '/people' }">People</a></li>
+		<li><router-link to="/people">People</router-link></li>
+		<li><router-link to="/people/foobar">People/foobar</router-link></li>
 	</ul>
 	<router-view></router-view>
 </div>

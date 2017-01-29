@@ -74,7 +74,7 @@ typedef VueConfig = {
 
 // Options / Data (https://vuejs.org/v2/api/#Options-Data)
 typedef VueComponentOptions = {
-	@:optional var data:Void->Dynamic;
+	@:optional var data:Dynamic;
 	@:optional var props:Array<String>;
 	@:optional var propsData:Dynamic;
 	@:optional var computed:Dynamic;
