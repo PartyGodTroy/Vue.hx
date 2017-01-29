@@ -1,0 +1,6 @@
+-lib vue
+-cp src
+-main Main
+-js bin/example.js
+-debug
+-dce full

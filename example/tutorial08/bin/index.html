@@ -1,0 +1,33 @@
+<html>
+<head><title>Haxe / Vue.js - example</title></head>
+<body>
+<!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+
+<form id="main" v-cloak>
+
+    <div class="bar">
+        <!-- Create a binding between the searchString model and the text field -->
+
+        <input type="text" v-model="searchString" placeholder="Enter your search terms" />
+    </div>
+
+    <ul>
+        <!-- Render a li element for every entry in the computed filteredArticles array. -->
+
+        <li v-for="article in filteredArticles">
+            <a v-bind:href="article.url"><img v-bind:src="article.image" /></a>
+            <p>{{article.title}}</p>
+        </li>
+    </ul>
+
+</form>
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>

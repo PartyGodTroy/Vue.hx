@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-limiter">
+            <h1><a href="http://tutorialzine.com/2016/08/building-your-first-app-with-vue-js/">Building Your First App With <span>Vue.js</span></a></h1>
+        </div>
+    </header>
+
+    <div id="main">
+
+        <div class="container">
+            <subreddit name="aww"></subreddit>
+            <subreddit name="space"></subreddit>
+            <subreddit name="gifs"></subreddit>
+            <subreddit name="food"></subreddit>
+            <subreddit name="comics"></subreddit>
+            <subreddit name="sports"></subreddit>
+        </div>
+
+    </div>
+
+    <template id="subreddit">
+
+        <div class="subreddit">
+            <h2>{{ name | uppercase }}</h2>
+
+            <ul class="item-list">
+                <li v-for="obj in posts">
+                    <post :item="obj"></post>
+                </li>
+            </ul>
+        </div>
+
+    </template>
+
+
+    <template id="post">
+
+        <div class="post">
+            <a :href="item.data.url" :style="getImageBackgroundCSS(item.data.thumbnail)" target="_blank" class="thumbnail"></a>
+
+            <div class="details">
+
+                <a :href="item.data.url" :title="item.data.title" target="_blank" class="title">
+                    {{ item.data.title | truncate}}
+                </a>
+
+                <div class="action-buttons">
+                    <a :href="'http://reddit.com' + item.data.permalink " title="Vote">
+                        <i class="material-icons">thumbs_up_down</i>
+                        {{item.data.score}}
+                    </a>
+
+                    <a :href="'http://reddit.com' + item.data.permalink " title="Go to discussion">
+                        <i class="material-icons">forum</i>
+                        {{item.data.num_comments}}
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </template>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.0.3/vue-resource.js"></script>
+    <script src="example.js"></script>
+
+    <!-- Demo ads. Please ignore and remove. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
+</html>

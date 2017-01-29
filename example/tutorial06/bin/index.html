@@ -1,0 +1,41 @@
+<html>
+<head><title>Haxe / Vue.js - example</title></head>
+<body>
+<!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+
+<!-- v-cloak hides any un-compiled data bindings until the Vue instance is ready. -->
+<!-- When the element is clicked the hideTooltp() method is called. -->
+
+<div id="main" v-cloak v-on:click="hideTooltip" >
+
+    <!-- This is the tooltip.
+         v-on:clock.stop is an event handler for clicks, with a modifier that stops event propagation.
+         v-if makes sure the tooltip is shown only when the "showtooltip" variable is truthful -->
+
+    <div class="tooltip" v-on:click.stop v-if="show_tooltip">
+
+        <!-- v-model binds the contents of the text field with the "text_content" model.
+         Any changes to the text field will automatically update the value, and
+         all other bindings on the page that depend on it.  -->
+
+        <input type="text" v-model="text_content" />
+    </div>
+
+    <!-- When the paragraph is clicked, call the "toggleTooltip" method and stop event propagation. -->
+
+    <!-- The mustache expression will be replaced with the value of "text_content".
+         It will automatically update to reflect any changes to that variable. -->
+
+    <p v-on:click.stop="toggleTooltip">{{text_content}}</p>
+
+</div>
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>

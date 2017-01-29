@@ -1,0 +1,37 @@
+<html>
+<head><title>Haxe / Vue.js - example</title></head>
+<body>
+<!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+
+<!-- v-cloak hides any un-compiled data bindings until the Vue instance is ready. -->
+
+<form id="main" v-cloak>
+
+	<h1>Services</h1>
+
+	<ul>
+		<!-- Loop through the services array, assign a click handler, and set or
+			 remove the "active" css class if needed -->
+		<li v-for="service in services" v-on:click="toggleActive(service)" v-bind:class="{ 'active': service.active}">
+			<!-- Display the name and price for every entry in the array .
+                Vue.js has a built in currency filter for formatting the price -->
+			{{service.name}} <span>{{service.price | currency}}</span>
+		</li>
+	</ul>
+
+	<div class="total">
+		<!-- Calculate the total price of all chosen services. Format it as currency. -->
+		Total: <span>{{total() | currency}}</span>
+	</div>
+
+</form>
+
+<style type="text/css"></style>
+
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head><title>Haxe / Vue.js - example</title></head>
+<body>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<div id="app">
+	<router-link to="/"><h1>Our company</h1></router-link>
+	<ul class="navigation">
+		<li><router-link to="/people">People</router-link></li>
+		<li><router-link to="/people/foobar">People/foobar</router-link></li>
+	</ul>
+	<router-view></router-view>
+</div>
+
+<script type="text/javascript" src="example.js"></script>
+</body>
+</html>
