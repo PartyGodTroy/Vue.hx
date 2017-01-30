@@ -4,7 +4,7 @@
   "license": "MIT",
   "tags": ["js", "mvw","mvvm", "frontend", "javascript", "reactive", "vue", "vue.js", "vuejs"],
   "description": "Vue 2.0 externs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "classPath": "src/",
   "releasenote": "Initial release, everything is working correctly.",
   "contributors": ["kidveno","MatthijsKamstra"],
