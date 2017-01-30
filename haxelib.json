@@ -7,6 +7,6 @@
   "version": "0.1.0",
   "classPath": "src/",
   "releasenote": "Initial release, everything is working correctly.",
-  "contributors": ["Ventroy"],
+  "contributors": ["kidveno","MatthijsKamstra"],
   "dependencies": {}
 }
