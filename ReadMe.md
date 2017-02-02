@@ -21,7 +21,7 @@ haxelib dev vue path/to/folder/src
 or use git directly
 
 ```cmd
-haxelib git vue https://github.com/MatthijsKamstra/Vue.hx.git
+haxelib git vue https://github.com/kidveno/Vue.hx.git
 ```
 
 don't forget to add it to your build file
