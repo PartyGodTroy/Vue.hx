@@ -1,6 +1,7 @@
 package ;
 
 import vue.Vue;
+import js.Lib;
 
 class Main
 {
@@ -25,10 +26,10 @@ class Main
 		    methods: {
 		        hideTooltip: function(){
 		            // When a model is changed, the view will be automatically updated.
-		            untyped This.show_tooltip = false;
+		            Lib.nativeThis.show_tooltip = false;
 		        },
 		        toggleTooltip: function(){
-		            untyped This.show_tooltip = !untyped This.show_tooltip;
+		            Lib.nativeThis.show_tooltip = Lib.nativeThis.show_tooltip;
 		        }
 		    }
 		});

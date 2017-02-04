@@ -18,7 +18,7 @@ var Main = function() {
 	}}});
 };
 Main.main = function() {
-	new Main();
+	var main = new Main();
 };
 Main.main();
 })();

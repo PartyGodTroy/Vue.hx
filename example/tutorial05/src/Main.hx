@@ -1,6 +1,7 @@
 package ;
 
 import vue.Vue;
+import js.Lib;
 
 class Main
 {
@@ -25,7 +26,7 @@ class Main
 			methods: {
 				makeActive: function(item){
 					// When a model is changed, the view will be automatically updated.
-					untyped This.active = item;
+					Lib.nativeThis.active = item;
 				}
 			}
 		});

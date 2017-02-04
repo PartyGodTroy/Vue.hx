@@ -1,6 +1,7 @@
 package ;
 
 import vue.Vue;
+import js.Lib;
 
 using StringTools;
 
@@ -55,8 +56,8 @@ class Main
 			computed: {
 				// A computed property that holds only those articles that match the searchString.
 				filteredArticles: function () {
-					var articles_array : Array<Dynamic> = untyped This.articles;
-					var searchString = untyped This.searchString;
+					var articles_array : Array<Dynamic> = Lib.nativeThis.articles;
+					var searchString = Lib.nativeThis.searchString;
 
 
 					trace(articles_array.length);
@@ -77,7 +78,7 @@ class Main
 						if(item.title.toLowerCase().indexOf(searchString) != -1){
 							filteredArray.push(item);
 							return true;
-						}else{
+						} else {
 							return false;
 						}
 					});

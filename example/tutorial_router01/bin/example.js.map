@@ -4,5 +4,5 @@
 "sourceRoot":"file:///",
 "sources":["/Users/matthijs/Documents/GIT/Vue.hx/example/tutorial_router01/src/Main.hx"],
 "names":[],
-"mappings":";;WASC,WACA;AAAA,CACC,YAAM;CAIN,WAAW,aAAa;CACxB,UAAU,aAAa;CACvB,UAAU,aAAa;CAOvB,aAAa,CACZ,SAAS,iBAAe,MACxB,SAAS,oBAAkB,KAC3B,SAAS,oBAAkB;CAM5B,aAAa,cAAc,WACnB;CAME,QAAQ,WACV,gBACG;;YAME,WACF;AAAA;;;;;"
+"mappings":";;WASC,WACA;AAAA,CACC,YAAM;CAIN,WAAW,aAAa;CACxB,UAAU,aAAa;CACvB,UAAU,aAAa;CAOvB,cAA6B,CAC5B,SAAS,iBAAe,MACxB,SAAS,oBAAkB,KAC3B,SAAS,oBAAkB;CAM5B,aAAa,cAAc,WACnB;CAiBR,UAAU,QAAQ,WACV,gBACG;;YAME,WACb;AAAA,YAAW;;;;;"
 }

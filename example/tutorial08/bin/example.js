@@ -44,7 +44,7 @@ var Main = function() {
 	}}});
 };
 Main.main = function() {
-	new Main();
+	var main = new Main();
 };
 var StringTools = function() { };
 StringTools.isSpace = function(s,pos) {

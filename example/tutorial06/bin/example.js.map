@@ -4,5 +4,5 @@
 "sourceRoot":"file:///",
 "sources":["/Users/matthijs/Documents/GIT/Vue.hx/example/tutorial06/src/Main.hx"],
 "names":[],
-"mappings":";;WAOC,WACA;AAAA,CACC,YAAM;CAGN,WAAW,QAAQ,OAGV,gBAGC,iBACY,sBACC,uBAIV,gBACQ,WAED;AAAA,sBAAoB;oBAEjB,WACH;AAAA,sBAAoB,CAAS;;;YAQpC,WACF;AAAA;;;;;"
+"mappings":";;WAQC,WACA;AAAA,CACC,YAAM;CAGN,WAAW,QAAQ,OAGV,gBAGC,iBACY,sBACC,uBAIV,gBACQ,WAET;AAAA,sBAA8B;oBAEnB,WACX;AAAA,sBAA8B;;;YAQ7B,WACb;AAAA,YAAW;;;;;"
 }

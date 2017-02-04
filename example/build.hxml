@@ -1,0 +1,73 @@
+
+-cmd cd tutorial01
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial02
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial03
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial04
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial05
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial06
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial07
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial08
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial09
+-cmd haxe build.hxml
+
+
+
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial_router01
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial_router02
+-cmd haxe build.hxml
+
+-cmd echo "done: ${PWD##*/}"
+
+-cmd cd ../tutorial_router03
+-cmd haxe build.hxml
+
+
+
+
+-cmd echo "done: ${PWD##*/}"
+
+
+-cmd cd ../tutorial_reddits
+-cmd haxe build.hxml
+
+
+-cmd echo "done: ${PWD##*/}"

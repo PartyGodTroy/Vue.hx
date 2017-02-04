@@ -9,7 +9,7 @@ var Main = function() {
 	var app6 = new Vue({ el : "#app-6", data : { message : "Hello Vue!"}});
 };
 Main.main = function() {
-	new Main();
+	var main = new Main();
 };
 Main.prototype = {
 	reverse: function(str) {

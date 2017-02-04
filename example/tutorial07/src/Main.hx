@@ -1,6 +1,7 @@
 package ;
 
 import vue.Vue;
+import js.Lib;
 
 class Main
 {
@@ -48,7 +49,7 @@ class Main
 
 		        	var total = 0;
 
-		        	untyped This.services.forEach(function(s){
+		        	Lib.nativeThis.services.forEach(function(s){
 		        		if (s.active){
 		        			total+= s.price;
 		        		}

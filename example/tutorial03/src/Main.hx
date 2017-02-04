@@ -2,6 +2,9 @@ package ;
 
 import vue.Vue;
 
+import js.Lib;
+
+
 class Main
 {
 
@@ -17,7 +20,8 @@ class Main
 			methods: {
 				reverseMessage: function () {
 					// untyped this.message = this.message.split('').reverse().join('');
-					untyped This.message = reverse(untyped This.message);
+					// untyped this.message = reverse(untyped this.message);
+					Lib.nativeThis.message = reverse(Lib.nativeThis.message);
 				}
 			}
 		});

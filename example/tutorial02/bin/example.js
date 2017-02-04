@@ -6,7 +6,7 @@ var Main = $hx_exports["Main"] = function() {
 	Main.app4 = new Vue({ el : "#app-4", data : { todos : [{ text : "Learn JavaScript"},{ text : "Learn Vue"},{ text : "Build something awesome"}]}});
 };
 Main.main = function() {
-	new Main();
+	var main = new Main();
 };
 Main.main();
 })(typeof exports != "undefined" ? exports : typeof window != "undefined" ? window : typeof self != "undefined" ? self : this);

@@ -22,7 +22,7 @@ class Main
 		// either be an actual component constructor created via
 		// Vue.extend(), or just a component options object.
 		// We'll talk about nested routes later.
-		var routes = [
+		var _routes : Array<Route> = [
 			{ path: '/', component: home },
 			{ path: '/foo', component: Foo },
 			{ path: '/bar', component: Bar }
@@ -32,8 +32,19 @@ class Main
 		// You can pass in additional options here, but let's
 		// keep it simple for now.
 		var router = new VueRouter({
-			routes:routes // short for routes: routes
+			routes:_routes // short for routes: routes
 		});
+
+		// var router = new VueRouter({
+		// 	routes:[
+		// 		{ path: '/', component: home },
+		// 		{ path: '/foo', component: Foo },
+		// 		{ path: '/bar', component: Bar }
+		// 	]
+		// });
+
+
+
 
 		// 4. Create and mount the root instance.
 		// Make sure to inject the router with the router option to make the

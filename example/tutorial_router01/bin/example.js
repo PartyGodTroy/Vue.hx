@@ -5,12 +5,12 @@ var Main = function() {
 	var home = { template : "<div>home</div>"};
 	var Foo = { template : "<div>foo</div>"};
 	var Bar = { template : "<div>bar</div>"};
-	var routes = [{ path : "/", component : home},{ path : "/foo", component : Foo},{ path : "/bar", component : Bar}];
-	var router = new VueRouter({ routes : routes});
-	new Vue({ router : router}).$mount("#app");
+	var _routes = [{ path : "/", component : home},{ path : "/foo", component : Foo},{ path : "/bar", component : Bar}];
+	var router = new VueRouter({ routes : _routes});
+	var app = new Vue({ router : router}).$mount("#app");
 };
 Main.main = function() {
-	new Main();
+	var main = new Main();
 };
 Main.main();
 })();

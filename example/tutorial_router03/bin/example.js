@@ -9,7 +9,7 @@ var Main = function() {
 	new Vue({ router : router}).$mount("#app");
 };
 Main.main = function() {
-	new Main();
+	var main = new Main();
 };
 Main.main();
 })();

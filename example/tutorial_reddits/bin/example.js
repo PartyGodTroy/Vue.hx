@@ -5,18 +5,18 @@ var Main = function() {
 	var subreddit = Vue.component("subreddit",{ template : "#subreddit", props : ["name"], data : function() {
 		return { posts : []};
 	}, created : function() {
-		this.$http.get("https://www.reddit.com/r/" + this.name + "/top.json?limit=5").then(function(resp) {
+		This.$http.get("https://www.reddit.com/r/" + This.name + "/top.json?limit=5").then(function(resp) {
 			if(resp.data == "string") {
 				resp.data = JSON.parse(resp.data);
 			}
-			this.posts = resp.data.data.children;
+			This.posts = resp.data.data.children;
 		});
 	}});
 	var post = Vue.component("post",{ template : "#post", props : ["item"], methods : { getImageBackgroundCSS : function(img) {
 		if(img != null && img != "self" && img != "nsfw") {
 			return "background-image: url(" + img + ")";
 		} else {
-			return "background-image: url(assets/img/placeholder.png)";
+			return "background-image: url(placeholder.png)";
 		}
 	}}});
 	Vue.filter("uppercase",function(value) {
@@ -33,7 +33,7 @@ var Main = function() {
 	new Vue({ el : "#main"});
 };
 Main.main = function() {
-	new Main();
+	var main = new Main();
 };
 Main.main();
 })();
