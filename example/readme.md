@@ -75,11 +75,10 @@ That will not work in Haxe, because it has a different context.
 We need to have the code transpiled to `this.xxx`.
 There are currently 3 ways to do this:
 
-- `trace(untyped This.message);`
-- `trace(Reflect.field(This, 'message'));`
+- `trace(untyped this.message);`
 - `trace(untyped __js__('this.message'));`
+- `trace(js.Lib.nativeThis.message);`
 
-(there is a extern class `This`)
 
 ```haxe
 var app5 = new Vue({
@@ -90,9 +89,9 @@ var app5 = new Vue({
 	methods: {
 		reverseMessage: function ()
 			// this.message
-			trace(untyped This.message);
-			trace(Reflect.field(This, 'message'));
+			trace(untyped this.message);
 			trace(untyped __js__('this.message'));
+			trace(js.Lib.nativeThis.message);
 		}
 	}
 });

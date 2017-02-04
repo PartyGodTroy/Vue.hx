@@ -133,17 +133,3 @@ typedef RenderFunction = {
 typedef Render = {
 
 }
-
-// `this` scope in Vue is different then in Haxe
-@:native('this')
-extern class Context {
-	@:selfCall public function Context():Dynamic;
-}
-@:native('this')
-extern class MethodsCtx {
-	@:selfCall public function MethodsCtx():Dynamic;
-}
-@:native('this')
-extern class This {
-	@:selfCall public function This():Dynamic;
-}
